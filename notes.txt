@@ -1,0 +1,27 @@
+How to handle world global scope, pass through constructors?
+
+"someone has departed" type descriptions should perhaps be stored in the character objects
+
+Do we need to separate functions moveplayerthroughexit and movecharacterthroughexit?
+
+Players identify rooms by string instead of reference. Consider changing.
+
+May not need MUTEX, check what synchronized keyword does
+
+Theres a lot of static crap in the world object.
+
+We need to make sure all class variables are private
+
+The way in which listen threads are distributed does not look safe with the C style 256 roll over, and not even sure its necessary
+
+Also not crazy about worldTimers floating around
+
+Characters need short hand names for attacks and commands. example I dont want to have to type "kill A shaggy dog"
+
+The delay timers for the triggerAriveAlert are really sketchy. Investigate
+
+the playerSay function should probably changed to characterSay for more versatility
+
+Consider making a function to getCharactersByRoom that includes both npcs and players to help eliminate the duplicate code
+
+getRoomByPlayer() may be obsolete since the player maintians a reference to the room they are in
